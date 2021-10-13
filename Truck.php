@@ -63,11 +63,11 @@ class Truck extends vehicle {
     public function isEmpty() 
     {
         $sentence = "";
-        if($this->chargement == 0) {
-            $sentence .= "in filling";
+        if($this->chargement == $this->storage) {
+            $sentence .= "full";
         }
         else {
-            $sentence .= "full !";
+            $sentence .= "in filling !";
         }
         return $sentence;
     }
